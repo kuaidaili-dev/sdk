@@ -6,7 +6,7 @@
 
 欢迎提交`PR`以使代码样例更加完整。
 
-获取更多关于调用API和代理服务器使用的资料，请参考[开发者指南](https://help.kuaidaili.com/dev/api/)
+获取更多关于调用API和代理服务器使用的资料，请参考[开发者指南](https://help.kuaidaili.com/dev/api/).
 
 ### 技术支持
 
