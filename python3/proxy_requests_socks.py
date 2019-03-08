@@ -31,3 +31,23 @@ print(r.status_code)  # 获取Response的返回码
 
 if r.status_code == 200:
     print(r.text)
+
+
+
+git filter-branch --env-filter '
+
+OLD_EMAIL="k_1043@126.com"
+CORRECT_NAME="Kuaidaili"
+CORRECT_EMAIL="service@kuaidaili.com"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+fi
+' --tag-name-filter cat -- --branches --tags
